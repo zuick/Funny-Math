@@ -1,11 +1,12 @@
 <html>
 	<head>
 		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta content="text/html; charset=utf-8">
 		<link rel="apple-touch-icon" href="images/app-icon.png" />
 		<link rel="apple-touch-icon" sizes="57x57" href="images/app-icon.png" />
 	</head>
 	<body style="background: #5B82C2; ">
-		<h1 style="text-align: center; font-family: arial; font-size: 72px; color: white; margin-top: 100px;" id="expression"></h1>
+		<h1 style="text-align: center; font-family: arial; font-size: 72px; color: white; margin-top: 200px;margin-bottom: 30px;" id="expression"></h1>
 		<form style="text-align: center; font-size: 20px; font-family: arial; color: white;" id="answer" name="answer" action="" method="post">
 			<input style="font-size: 20px;" id="ans" type="number" name="ans">
 			<input style="font-size: 20px;" type="submit" value="Верно?">
@@ -47,17 +48,17 @@
 				var x = getRandomArbitary( 0, difficulty );
 				var y = getRandomArbitary( 0, difficulty );
 				if( getRandomArbitary( 0, 10) > 5 ){
-					sign = '+';
+					sign = ' + ';
 					currentAnswer = x + y;
-					return x + sign + y + '=?';
+					return x + sign + y + ' = ?';
 				}else{
-					sign = '-';
+					sign = ' - ';
 					if( x > y ){
 						currentAnswer = x - y;
-						return x + sign + y + '= ?';
+						return x + sign + y + ' = ?';
 					}else{
 						currentAnswer = y - x;
-						return y + sign + x + '= ?';
+						return y + sign + x + ' = ?';
 					}
 				}
 			}
