@@ -1,6 +1,7 @@
-<html>
+п»ї<html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8">
+		<title>РњР°С‚РµРјР°С‚РёРєР°</title>
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<link rel="apple-touch-icon" href="images/app-icon.png" />
 		<link rel="apple-touch-icon" sizes="57x57" href="images/app-icon.png" />
@@ -9,7 +10,7 @@
 		<h1 style="text-align: center; font-family: arial; font-size: 72px; color: white; margin-top: 200px;margin-bottom: 30px;" id="expression"></h1>
 		<form style="text-align: center; font-size: 20px; font-family: arial; color: white;" id="answer" name="answer" action="" method="post">
 			<input style="font-size: 20px;" id="ans" type="number" name="ans">
-			<input style="font-size: 20px;" type="submit" value="Верно?">
+			<input style="font-size: 20px;" type="submit" value="Р’РµСЂРЅРѕ?">
 		</form>
 		<script type="text/javascript" charset="utf-8">
 			var difficulty = 10;
@@ -17,18 +18,18 @@
 			var currentAnswer = 0;
 			var sign = '.';
 			var goodMessages = [
-				"Правильно! Возьми с полки пирожок!", 
-				"Именно так!", 
-				"Я восхищён!", 
-				"Хм, ты крут!", 
-				"Молодец! Возьми с полки огурец!",
+				"РџСЂР°РІРёР»СЊРЅРѕ! Р’РѕР·СЊРјРё СЃ РїРѕР»РєРё РїРёСЂРѕР¶РѕРє!", 
+				"РРјРµРЅРЅРѕ С‚Р°Рє!", 
+				"РЇ РІРѕСЃС…РёС‰С‘РЅ!", 
+				"РҐРј, С‚С‹ РєСЂСѓС‚!", 
+				"РњРѕР»РѕРґРµС†! Р’РѕР·СЊРјРё СЃ РїРѕР»РєРё РѕРіСѓСЂРµС†!",
 			];
 			var errorMessages = [
-				"Неа.", 
-				"А вот и нет!", 
-				"Ответ неверный!", 
-				"Упс.", 
-				"Ой-ой-ой!",
+				"РќРµР°.", 
+				"Рђ РІРѕС‚ Рё РЅРµС‚!", 
+				"РћС‚РІРµС‚ РЅРµРІРµСЂРЅС‹Р№!", 
+				"РЈРїСЃ.", 
+				"РћР№-РѕР№-РѕР№!",
 			];
 			function getRandomArbitary(min, max){
 				return Math.floor( Math.random() * (max - min) + min);
@@ -37,7 +38,7 @@
 				if( document.forms["answer"]["ans"].value == currentAnswer ){
 					alert( goodMessages[getRandomArbitary( 0, goodMessages.length )] );
 				}else{
-					alert( errorMessages[getRandomArbitary( 0, errorMessages.length )] + " Правильный ответ: " + currentAnswer );
+					alert( errorMessages[getRandomArbitary( 0, errorMessages.length )] + " РџСЂР°РІРёР»СЊРЅС‹Р№ РѕС‚РІРµС‚: " + currentAnswer );
 				}
 				difficulty += difficultyDelta;
 				document.getElementById('expression').innerHTML = getExpression();
